@@ -1,1 +1,1 @@
-# Doctor-Management-System
+# Clinic-Management-System
