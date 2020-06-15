@@ -1,1 +1,1 @@
-# Clinic-Management-System
+# Foodylytic- An analytics based web app for food mess-like organisations. It helps in cutting down food wastgae as well as overall costs, and also helps in undestanding various trends related to food consumption.
