@@ -150,7 +150,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']},children=[
                     figure={
                         'data': [
                                   {'x':dff['WEEK'], 'y':dff['Wastage'], 'type': 'line','name':'Wastage'},
-                                  {'x':dff['WEEK'], 'y':dff['Wastage if followed Model'], 'type': 'line','name':'wastage if foodylytics is used'},
+                                  {'x':dff['WEEK'], 'y':dff['Wastage if followed Model'], 'type': 'line','name':'wastage if Messlytix is used'},
                                 
                                 ],
                         
