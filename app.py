@@ -32,6 +32,16 @@ class Feedback(db.Model):
         self.regno = regno
         self.attendance = attendance
 
+class Login(db.Model):
+    __tablename__ = 'login'
+    id = db.Column(db.Integer, primary_key=True)
+    regno = db.Column(db.String(200))
+
+    def __init__(self,regno):
+        self.regno = regno
+
+
+
 
 model = pickle.load(open('messmodel.pkl', 'rb'))
 attendees = db.session.query(Feedback).filter(Feedback.attendance == 'regno').count()
@@ -73,9 +83,12 @@ def submit():
 
         if db.session.query(Feedback).filter(Feedback.regno == regno).count() == 0:
             data = Feedback(name, regno, attendance)
-            db.session.add(data)
-            db.session.commit()
-            return render_template('success.html')
+            if db.session.query(Login).filter(Login.regno == regno).count() == 0:
+                return render_template('student.html',message='Registraion Number Not Recognised')
+            else:
+                db.session.add(data)
+                db.session.commit()
+                return render_template('success.html')
         else:
             return render_template('student.html')
 
