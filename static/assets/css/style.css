@@ -1,0 +1,193 @@
+body{
+    background-color: black;
+    font-size: 1.1rem;
+    color: white;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-padding-top: 70px;
+    padding-top: 75px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgba(0, 0, 0, 0.842);
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right:20px;
+}
+.login:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgba(255, 255, 255, 0.842);
+}
+.cardbtn{
+    background-color: #1a2c35;
+    color: white;
+    border: 3px solid rgb(5, 5, 5);
+    border-radius: 1rem;
+    margin: 0rem 2rem;
+    padding: 0.5rem 2rem;
+}
+.cardbtn:hover{
+    background-color: rgb(173, 208, 240);
+    color: black;
+    border: 3px solid rgb(5, 5, 5);
+    border-radius: 0;
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+}
+/* Navbar */
+.navbar {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 1.3rem;
+    
+    border-left: 3px solid white;
+    background-color: #007BBA;
+}
+
+.navbar a {
+    color: black;
+    font-weight: 100%;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+    border-radius: 100%;
+    border-width: 1%;
+    background-color: rgb(210, 224, 231);
+    border-radius: 2rem;
+    margin: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+
+}
+.xyz:focus{
+    outline: 0;
+    box-shadow: none !important;
+}
+/* custom nav pills */
+@media (max-width: 1195px) {
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: transparent;
+        
+        color: rgb(255, 255, 255);
+    }
+}
+/* Navbar Toggler */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='1' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    border-radius: 3px;
+    padding: 19px;
+}
+
+.container{
+    padding-top: 8rem;
+    padding-right: 3rem;
+    font-size: 1.5rem;
+}
+.card{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    border-width: 1rem;
+    border-radius: 1%;
+    border: 5px solid rgb(255, 255, 255);
+    
+}
+.input{
+    background-color: #000000;
+    margin: 1rem;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    border: 3px solid white;
+    border-radius: 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 50px;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    color: #FFFFFF;
+}
+.abc{
+    padding: 1rem;
+    text-align: center;
+    margin: 0.4rem;
+}
+.input:focus{
+    outline: 0;
+    box-shadow: none !important;
+    background-color: #7CCDF4;
+    opacity: 0.9;
+    color: black;
+}
+.card-header{
+    background-color: #007BBA;
+}
+.btn1{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 3px solid white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 50px;
+    color: #FFFFFF;
+}
+.btn1:hover{
+    background-color: #BCE3FA;
+    transition: background-color 0.8s ease;
+    color: black;
+}
+.heading{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.price-text{
+    padding: 1.5rem;
+}
+.btn2{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: 3px solid white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 50px;
+    color: #FFFFFF;
+}
+.heading-top{
+    font-family: 'Bebas Neue',cusrive;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+.head-text{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size:1.5rem;
+}
