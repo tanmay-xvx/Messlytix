@@ -34,6 +34,7 @@ class Feedback(db.Model):
 
 
 model = pickle.load(open('messmodel.pkl', 'rb'))
+attendees = db.session.query(Feedback).filter(Feedback.attendance == 'regno').count()
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -50,7 +51,7 @@ def choose():
 # admin
 @app.route('/admin')
 def admin():
-    return render_template('admin.html')
+    return render_template('admin.html',new_attendance='The number of attendees are {} \n'.format(attendees))
 
 # analyse
 @app.route('/analyse')
@@ -152,7 +153,7 @@ def predict():
     prediction = model.predict([[day1, weekend, New_Menu_rating, Wastage]])
     output = round(prediction[0], 3)
 
-    return render_template('admin.html', prediction_text1='Menu rating for Today is : {} \n'.format(New_Menu_rating), prediction_text2='Average wastage on this day is: {} \n '.format(mean_wastage), prediction_text3='To avoid this wastage this is the predicted amount to be cooked :\n{}'.format(output))
+    return render_template('admin.html', new_attendance='The number of attendees are {} /n'.format(attendees), prediction_text1='Menu rating for Today is : {} \n'.format(New_Menu_rating), prediction_text2='Average wastage on this day is: {} \n '.format(mean_wastage), prediction_text3='To avoid this wastage this is the predicted amount to be cooked :\n{}'.format(output))
 
 
 @app.route('/predict_api', methods=['POST'])
