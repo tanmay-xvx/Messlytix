@@ -186,10 +186,10 @@ body{
 .heading-top{
     font-family: 'Bebas Neue',cursive;
     font-size: 6rem;
-    margin-bottom: 1rem;
 }
 .head-text{
     font-family: Montserrat;
     font-weight: 400;
-    font-size:1.5rem;
+    font-size: 1.5rem;
+    color:white;
 }
