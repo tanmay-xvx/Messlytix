@@ -7,8 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="A simple resource hub for Lockdown">
+  <meta name="keywords" content="COVID-19,Quarantine,Lockdown,Stay at Home">
+  <meta name="theme-color" content="#FCE205">
   <!-- Title -->
-  <title>Messyltix</title>
+  <title>Foodylytics</title>
 
   <!-- Bootstrap Link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -34,13 +37,27 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <!--AOS Links-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+<!-- chatbot -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/5ea837cf69e9320caac814c4/default';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
+
+
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
   <section id="section-1">
@@ -50,7 +67,7 @@
 
       <!-- name -->
       <a class="navbar-brand" href="#section-1">
-        <img src="../static/assets/img/logo-navbar.png" alt="random" style="width: 4rem;">
+        <img class="fluid" src="../static/" style="height: 5rem;">
       </a>
 
       <!-- toggler -->
@@ -62,72 +79,28 @@
 
       <!-- List Items -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav nav-pills">
+        <ul class="navbar-nav ml-auto nav-pills">
           <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
-            <a class="xyz nav-link mx-4 mt-2" href="#section-1">Home</a>
+            <a class="xyz nav-link mx-4 mt-2" href="{{url_for('admin')}}">Home</a>
           </li>
           <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
-            <a class="nav-link mx-4 mt-2" href="#section-2">Benefits</a>
-          </li>
+            <a class="nav-link mx-4 mt-2" href="{{url_for('admin')}}">Data Entry</a>
 
-
-          </li>
         </ul>
-        <div style="margin-left:50rem;">
-          <button class="login">
-            <a class="nav-link" href="choose.html" target="blank">Login</a>
-          </button>
-        </div>
-
       </div>
+
 
     </nav>
 
   </section>
+  <div class="container">
 
-  <section id="section-1">
-    <div class="container">
-      <h1 class="heading-top">Messlytix</h1>
-      <div class="row">
-        <div class="col-lg-8">
-          <h2 class="head-text" style="margin-bottom:30px;">The mess analytics tool for detailed real-time ML-based
-            analytics to minimize your food wastages and managing attendance.</h2>
-          <a href="{{url_for('choose')}}">
-            <button class="login">
-              Login
-            </button>
-          </a>
-        </div>
-        <div class="img-fluid col-lg-4">
-          <img src="../static/assets/img/home-img.png" alt="random" style="margin-top: -12rem;">
-        </div>
-      </div>
-
+    <h1 class="heading" style="text-align: center;">Analysis Of Data</h1>
+    <div class="flourish-embed img-fluid" style="width:100%;" data-src="story/329771"
+      data-url="https://flo.uri.sh/story/329771/embed">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
     </div>
-  </section>
-
-  <section id="section-2">
-    <div class="container">
-      <h1 class="heading">Benefits</h1>
-      <div class="row">
-        <div class="col-lg-6" style="margin-left: 0;">
-          <ul>
-            <li>Get ML-based predictions to efficientize your food procurement and limit food wastage.</li>
-            <li>Get live-attendance updates through student check-ins.</li>
-            <li>Get detailed statistics on your food procurement and wastage.</li>
-            <li>Incentivize your mess with rich menu tracking and feedback.</li>
-          </ul>
-        </div>
-        <div class="img-fluid col-lg-6">
-          <img src="../static/assets/img/graph-img.png" alt="random" style="width: max-content;">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
+  </div>
 </body>
 
 </html>
