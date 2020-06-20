@@ -37,6 +37,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+<script>
+  window.onload = setInterval(clock,1000);
+function clock()
+{
+   var d = new Date();
+   var date = d.getDate();
+   var year = d.getFullYear();
+   var month = d.getMonth();
+   var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+   month = monthArr[month];
+   document.getElementById("datetime").innerHTML=date+" "+month+", "+year+".";
+}
+</script>
 <body  data-spy="scroll" data-target="#myScrollspy" data-offset="80">
   <section id="section-1">
 
@@ -57,21 +70,20 @@
 
       <!-- List Items -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <h1>Student Response</h1>
       </div>
 
     </nav>
 
   </section>
+  <section id="section-2">
+    <div class="text-left ml-3">
+        <p class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px;">
+          Hello Admin!
+        </p>
+        <span class="head-text">Today is </span><span class="head-text" id="datetime"></span>
+    </div>
+</section>
 
-
-<section id="section-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consectetur reprehenderit a minima possimus quibusdam odio quia omnis nulla eum voluptatibus quos ad illum placeat illo molestiae, sit sunt voluptatem.</p>
-                
-            </div>
             
       <div class="pricing-column col-lg-8 ">
         <div class="card">
