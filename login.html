@@ -51,76 +51,67 @@ function clock()
 }
 </script>
 <body  data-spy="scroll" data-target="#myScrollspy" data-offset="80" style="text-align: center;">
-  <section id="section-1">
+    <section id="section-1">
 
-    <!-- Navbar-->
-    <nav class="navbar navbar-expand-xl fixed-top" id="myScrollspy">
-
-      <!-- name -->
-      <a class="navbar-brand" href="#section-1">
-        <img class="fluid" src="../static/assets/img/logo-navbar.png" style="height: 5rem;">
-      </a>
-
-      <!-- toggler -->
-      <button class="xyz navbar-toggler custom-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- List Items -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto nav-pills">
-          <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
-            <a class="xyz nav-link mx-4 mt-2" href="#section-1">Home</a>
-          </li>
-          <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
-            <a class="nav-link mx-4 mt-2" href="#section-2">Why use Messlytix?</a>
-          </li>
-        </ul>
-      
-
-    </nav>
-
-  </section>
-  <section id="section-2">
-    <div class="text-left ml-3">
-        <p class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px; text-align:center;">
-          Hello Student!
-        </p>
-        <div style="text-align: center;">
-          <span class="head-text" >Today is </span><span class="head-text" id="datetime"></span>
-        </div>
-        
-    </div>
-</section>
-
+        <!-- Navbar-->
+        <nav class="navbar navbar-expand-xl fixed-top" id="myScrollspy">
+    
+          <!-- name -->
+          <a class="navbar-brand" href="#section-1">
+            <img src="../static/assets/img/logo-navbar.png" alt="random" style="width: 4rem;">
+          </a>
+    
+          <!-- toggler -->
+          <button class="xyz navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- List Items -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-pills">
+              <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="xyz nav-link mx-4 mt-2" href="#section-1">Home</a>
+              </li>
+              <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link mx-4 mt-2" href="#section-2">Benefits</a>
+              </li>
+    
+    
+              </li>
+            </ul>
+            <div style="margin-left:50rem;">
+              <button class="login">
+                <a class="nav-link" href="{{url_for('choose')}}" target="blank">Login</a>
+              </button>
+            </div>
+    
+          </div>
+    
+        </nav>
+    
+      </section>
+      <section>
+        <div class="row">
+              <div class="col-lg-3 ">
+                <img src="../static/assets/img/pencil-right.png" alt="" style="width: 100%; padding:5rem;">
+              </div>
+            <div style="margin-top: 8rem; margin-bottom: 4rem;" class="col-lg-6">
+                <h1 style="margin-bottom: 4rem;">Login to your Messlytix Account:</h1>
             
-      <div class="pricing-colum " style="margin: 2rem 15rem;">
-        <div class="card">
-          <div class="card-header">
-            <h3>Give Mess Attendance details</h3>
+                <form action="" method="POST">
+                    <div ><label>Username:</label><input class="input" type="text" name="name" required style="background-color: #0077b3e7;"></div>
+                    <div ><label>Password:</label><input class="input" type="password" name="name" required style="background-color: #0077b3e7;"></div>
+                    <div style="padding:2rem;"><button class="btn1" type="submit" style="padding: 0rem 4rem;">Submit</button></div>
+                </form>
+           </div>
+           <div class="col-lg-3">
+            <img src="../static/assets/img/pencil-left.png" alt=""  style="width:100%; padding:5rem;">
           </div>
-          <div class="card-body">
-            <h2 class="price-text">Enter the details:</h2>
-            <form action="{{ url_for('submit')}}", method="post">
-                <div class="abc"><label>Name:</label><input class="input" type="text" name="name" required="required"></div>
-                <div class="abc" ><label>Reg No:</label><input class="input" type="text" name="regno" required="required"></div>
-                <div class="abc"><h2>Attending</h2></div>
-                <div class="abcd" ><label>Yes:</label><input class="input" type="radio" name="attendance" value="yes" ></div>
-                <div class="abcd" ><label>No:</label><input class="input" type="radio" name="attendance" value="no" ></div>
-
-            <button class="btn1 btn-block" type="submit">Submit</button>
-          </form>
-          </div>
-        </div>
-      </div>
-        </div>
-
-    </div>
-</section>
-
-
-
+          
+        </div> 
+      </section>
+  
   </body>
   </html>
