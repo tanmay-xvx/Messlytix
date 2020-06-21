@@ -12,7 +12,7 @@
     content="COVID-19,Quarantine,Lockdown,Stay at Home">
   <meta name="theme-color" content="#FCE205">
   <!-- Title -->
-  <title>Foodylytics</title>
+  <title>Messlytix</title>
 
   <!-- Bootstrap Link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -37,7 +37,20 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body  data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+<script>
+  window.onload = setInterval(clock,1000);
+function clock()
+{
+   var d = new Date();
+   var date = d.getDate();
+   var year = d.getFullYear();
+   var month = d.getMonth();
+   var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+   month = monthArr[month];
+   document.getElementById("datetime").innerHTML=date+" "+month+", "+year+".";
+}
+</script>
+<body  data-spy="scroll" data-target="#myScrollspy" data-offset="80" style="text-align: center;">
   <section id="section-1">
 
     <!-- Navbar-->
@@ -50,30 +63,40 @@
 
       <!-- toggler -->
       <button class="xyz navbar-toggler custom-toggler" type="button" data-toggle="collapse"
-      data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <!-- List Items -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <h1>Student Response</h1>
-      </div>
+        <ul class="navbar-nav ml-auto nav-pills">
+          <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
+            <a class="xyz nav-link mx-4 mt-2" href="#section-1">Home</a>
+          </li>
+          <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
+            <a class="nav-link mx-4 mt-2" href="#section-2">Why use Messlytix?</a>
+          </li>
+        </ul>
+      
 
     </nav>
 
   </section>
+  <section id="section-2">
+    <div class="text-left ml-3">
+        <p class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px; text-align:center;">
+          Hello Student!
+        </p>
+        <div style="text-align: center;">
+          <span class="head-text" >Today is </span><span class="head-text" id="datetime"></span>
+        </div>
+        
+    </div>
+</section>
 
-
-<section id="section-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consectetur reprehenderit a minima possimus quibusdam odio quia omnis nulla eum voluptatibus quos ad illum placeat illo molestiae, sit sunt voluptatem.</p>
-                
-            </div>
             
-      <div class="pricing-column col-lg-8 ">
+      <div class="pricing-colum " style="margin: 2rem 15rem;">
         <div class="card">
           <div class="card-header">
             <h3>Give Mess Attendance details</h3>
@@ -86,8 +109,8 @@
                 <div class="abc"><label>Name:</label><input class="input" type="text" name="name" required="required"></div>
                 <div class="abc" ><label>Reg No:</label><input class="input" type="text" name="regno" required="required"></div>
                 <div class="abc"><h2>Attending</h2></div>
-                <div class="abc"><label>Yes:</label><input class="input" type="radio" name="attendance" value="yes" ></div>
-                <div class="abc"><label>No:</label><input class="input" type="radio" name="attendance" value="no" ></div>
+                <div class="abcd" ><label>Yes:</label><input class="input" type="radio" name="attendance" value="yes" ></div>
+                <div class="abcd" ><label>No:</label><input class="input" type="radio" name="attendance" value="no" ></div>
 
             <button class="btn1 btn-block" type="submit">Submit</button>
           </form>

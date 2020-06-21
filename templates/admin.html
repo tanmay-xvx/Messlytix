@@ -42,6 +42,19 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+<script>
+  window.onload = setInterval(clock,1000);
+function clock()
+{
+   var d = new Date();
+   var date = d.getDate();
+   var year = d.getFullYear();
+   var month = d.getMonth();
+   var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+   month = monthArr[month];
+   document.getElementById("datetime").innerHTML=date+" "+month+", "+year+".";
+}
+</script>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
   <section id="section-1">
 
@@ -62,7 +75,7 @@
 
       <!-- List Items -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto nav-pills">
+        <ul class="navbar-nav nav-pills">
           <li class="nav-item mx-auto" data-toggle="collapse" data-target=".navbar-collapse">
             <a class="xyz nav-link mx-4 mt-2" href="#section-1">Home</a>
           </li>
@@ -70,68 +83,28 @@
             <a class="nav-link mx-4 mt-2" href="#section-2">Why use Messlytix?</a>
           </li>
         </ul>
-        <div style="padding-left: 27rem;"><a href="{{url_for('analyse')}}" target="_blank">
-            <button class="btn2 btn btn-light">Analyze
+        <div style="padding-left: 37rem;"><a href="https://messlytixdashboard.herokuapp.com/" target="_blank">
+            <button class="btn2 btn btn-light">Dashboard
             </button></a></div>
       </div>
 
     </nav>
 
   </section>
-
-  <section id="section-1">
-    <div class="container">
-      <h1 class="heading">Messlytix</h1>
-      <div class="row">
-        <div class="col-lg-6" style="margin-right: 0;">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consectetur reprehenderit a minima
-            possimus quibusdam odio quia omnis nulla eum voluptatibus quos ad illum placeat illo molestiae, sit sunt
-            voluptatem.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odio sit mollitia consectetur officiis eum est
-            esse laudantium. Ducimus, corporis sit autem impedit commodi perspiciatis repudiandae! Quia eaque labore
-            sequi.</p>
-        </div>
-        <div class="img-fluid col-lg-6">
-          <img src="../static/assets/img/home-img.png" alt="random" style="margin-top: -12rem;">
-        </div>
-      </div>
+  <section id="section-2" >
+    <div class="text-left ml-3" style="text-align: center;">
+        <h1 class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px; text-align: center;">
+          Hello Admin!
+        </h1>
+        <div style="text-align: center;"><span class="head-text">Today is </span><span class="head-text" id="datetime"></span></div>
+    </div>
+</section>
+      
 
     </div>
-  </section>
-
-  <section id="section-2">
-    <div class="container">
-      <h1 class="heading">{{ new_attendance }}</h1>
-      <br>
-      <h1 class="heading">Why use Messlytix?</h1>
-      <div class="row">
-        <div class="col-lg-6" style="margin-right: 0;">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consectetur reprehenderit a minima
-            possimus quibusdam odio quia omnis nulla eum voluptatibus quos ad illum placeat illo molestiae, sit sunt
-            voluptatem.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odio sit mollitia consectetur officiis eum est
-            esse laudantium. Ducimus, corporis sit autem impedit commodi perspiciatis repudiandae! Quia eaque labore
-            sequi.</p>
-        </div>
-        <div class="img-fluid col-lg-6">
-          <img src="../static/assets/img/graph-img.png" alt="random" style="width: max-content;">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="section-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consectetur reprehenderit a minima
-            possimus quibusdam odio quia omnis nulla eum voluptatibus quos ad illum placeat illo molestiae, sit sunt
-            voluptatem.</p>
-
-        </div>
-
-        <div class="pricing-column col-lg-8 ">
+  </section >
+         <h1 class="heading">{{ new_attendance }}</h1>
+        <div class="pricing-column col-lg-8 " style="margin: 2rem 15rem;">
           <div class="card">
             <div class="card-header">
               <h3>Give the date and week</h3>
