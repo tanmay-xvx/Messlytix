@@ -6,14 +6,14 @@ import pickle
 app = Flask(__name__,
             static_folder='static')
 
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345@localhost/studentsfeedback'
 
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://famqlocynuyuyo:f3555300fc14a35ba30ad1f14b8f8f47909a2b32f4d658407bd7cc50508cc046@ec2-34-198-243-120.compute-1.amazonaws.com:5432/d1pffae9lcncb6'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
