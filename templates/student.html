@@ -67,7 +67,6 @@
 
 <section id="section-3">
     <div class="container">
-      <h1 class="heading">{{ message }}</h1>
         <div class="row">
             <div class="col-lg-4">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consectetur reprehenderit a minima possimus quibusdam odio quia omnis nulla eum voluptatibus quos ad illum placeat illo molestiae, sit sunt voluptatem.</p>
@@ -81,6 +80,8 @@
           </div>
           <div class="card-body">
             <h2 class="price-text">Enter the details:</h2>
+            <h2 class="price-text">{{ message }}</h2>
+
             <form action="{{ url_for('submit')}}", method="post">
                 <div class="abc"><label>Name:</label><input class="input" type="text" name="name" required="required"></div>
                 <div class="abc" ><label>Reg No:</label><input class="input" type="text" name="regno" required="required"></div>
