@@ -1,4 +1,4 @@
-# Messlytix:An analytics based web app for food mess-like organisations. It helps in cutting down food wastage as well as overall costs, and also helps in undestanding various trends related to food consumption and wastage.
+# Messlytix:An analytics based web app for food mess-like organisations. It helps in cutting down food wastage as well as overall costs,Works as attendance tracker for students eating in the mess and also helps in undestanding various trends related to food consumption and wastage.
 <br>
 <strong>Project for the Hack Jaipur 2020!</strong>
 <br>
