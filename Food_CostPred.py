@@ -311,6 +311,7 @@ inputtt=[Item,new_year,new_month,new_day,day_name]
 inputtt = np.asarray(inputtt)
 inputtt.reshape(-1,1)
 print ('Predicted Item Price: \n', "Rs.",regressor.predict([inputtt]))
+pickle.dump(regressor,open('costpred.pkl', 'wb'))
 
 
 # In[ ]:
