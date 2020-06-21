@@ -126,9 +126,13 @@ body{
     color: #FFFFFF;
 }
 .abc{
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
-    margin: 0.4rem;
+    margin-bottom: 1rem ;
+}
+.abcd{
+    padding: 0.5rem;
+    display: inline;
 }
 .input:focus{
     outline: 0;
@@ -154,6 +158,7 @@ body{
     font-size: 17px;
     line-height: 50px;
     color: #FFFFFF;
+    margin-top: 1rem;
 }
 .btn1:hover{
     background-color: #BCE3FA;

@@ -83,7 +83,7 @@ function clock()
             <a class="nav-link mx-4 mt-2" href="#section-2">Why use Messlytix?</a>
           </li>
         </ul>
-        <div style="padding-left: 27rem;"><a href="{{url_for('analyse')}}" target="_blank">
+        <div style="padding-left: 27rem;"><a href="https://messlytixdashboard.herokuapp.com/" target="_blank">
             <button class="btn2 btn btn-light">Dashboard
             </button></a></div>
       </div>
@@ -91,20 +91,20 @@ function clock()
     </nav>
 
   </section>
-  <section id="section-2">
-    <div class="text-left ml-3">
-        <p class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px;">
+  <section id="section-2" >
+    <div class="text-left ml-3" style="text-align: center;">
+        <h1 class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px; text-align: center;">
           Hello Admin!
-        </p>
-        <span class="head-text">Today is </span><span class="head-text" id="datetime"></span>
+        </h1>
+        <div style="text-align: center;"><span class="head-text">Today is </span><span class="head-text" id="datetime"></span></div>
     </div>
 </section>
       
 
     </div>
-  </section>
+  </section >
          <h1 class="heading">{{ new_attendance }}</h1>
-        <div class="pricing-column col-lg-8 ">
+        <div class="pricing-column col-lg-8 " style="margin: 2rem 15rem;">
           <div class="card">
             <div class="card-header">
               <h3>Give the date and week</h3>

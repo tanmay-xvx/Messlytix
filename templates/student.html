@@ -12,7 +12,7 @@
     content="COVID-19,Quarantine,Lockdown,Stay at Home">
   <meta name="theme-color" content="#FCE205">
   <!-- Title -->
-  <title>Foodylytics</title>
+  <title>Messlytix</title>
 
   <!-- Bootstrap Link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -50,7 +50,7 @@ function clock()
    document.getElementById("datetime").innerHTML=date+" "+month+", "+year+".";
 }
 </script>
-<body  data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+<body  data-spy="scroll" data-target="#myScrollspy" data-offset="80" style="text-align: center;">
   <section id="section-1">
 
     <!-- Navbar-->
@@ -77,15 +77,18 @@ function clock()
   </section>
   <section id="section-2">
     <div class="text-left ml-3">
-        <p class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px;">
-          Hello Admin!
+        <p class="heading-top" style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px; text-align:center;">
+          Hello Student!
         </p>
-        <span class="head-text">Today is </span><span class="head-text" id="datetime"></span>
+        <div style="text-align: center;">
+          <span class="head-text" >Today is </span><span class="head-text" id="datetime"></span>
+        </div>
+        
     </div>
 </section>
 
             
-      <div class="pricing-column col-lg-8 ">
+      <div class="pricing-colum " style="margin: 2rem 15rem;">
         <div class="card">
           <div class="card-header">
             <h3>Give Mess Attendance details</h3>
@@ -96,8 +99,8 @@ function clock()
                 <div class="abc"><label>Name:</label><input class="input" type="text" name="name" required="required"></div>
                 <div class="abc" ><label>Reg No:</label><input class="input" type="text" name="regno" required="required"></div>
                 <div class="abc"><h2>Attending</h2></div>
-                <div class="abc"><label>Yes:</label><input class="input" type="radio" name="attendance" value="yes" ></div>
-                <div class="abc"><label>No:</label><input class="input" type="radio" name="attendance" value="no" ></div>
+                <div class="abcd" ><label>Yes:</label><input class="input" type="radio" name="attendance" value="yes" ></div>
+                <div class="abcd" ><label>No:</label><input class="input" type="radio" name="attendance" value="no" ></div>
 
             <button class="btn1 btn-block" type="submit">Submit</button>
           </form>
