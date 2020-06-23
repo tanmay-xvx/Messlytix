@@ -22,9 +22,8 @@ db = SQLAlchemy(app)
 
 class Feedback(db.Model):
     __tablename__ = 'feedback'
-    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200))
-    regno = db.Column(db.String(200))
+    regno = db.Column(db.String(200), primary_key=True)
     attendance = db.Column(db.String(4))
 
     def __init__(self, name, regno, attendance):
