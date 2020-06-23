@@ -6,7 +6,7 @@ import pickle
 app = Flask(__name__,
             static_folder='static')
 
-ENV = 'prod'
+ENV = 'dev'
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345@localhost/studentsfeedback'
@@ -61,6 +61,7 @@ def choose():
 # admin
 @app.route('/admin')
 def admin():
+    attendees = db.session.query(Feedback).filter(Feedback.attendance == 'yes').count()
     return render_template('admin.html',new_attendance='The number of attendees are {} \n'.format(attendees))
 
 # analyse
@@ -165,6 +166,7 @@ def predict():
     New_Menu_rating = menu_rating()
     prediction = model.predict([[day1, weekend, New_Menu_rating, Wastage]])
     output = round(prediction[0], 3)
+    attendees = db.session.query(Feedback).filter(Feedback.attendance == 'yes').count()
 
     return render_template('admin.html', new_attendance='The number of attendees are {} \n'.format(attendees), prediction_text1='Menu rating for Today is : {} \n'.format(New_Menu_rating), prediction_text2='Average wastage on this day is: {} \n '.format(mean_wastage), prediction_text3='To avoid this wastage this is the predicted amount to be cooked :\n{}'.format(output))
 
