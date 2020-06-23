@@ -104,19 +104,19 @@ def predict():
     print(day)
 
     def convert_to_int(day):
-        if day == 'Monday':
+        if day == 'Monday' or 'monday':
             return 0
-        elif day == 'Tuesday':
+        elif day == 'Tuesday' or 'tuesday':
             return 1
-        elif day == 'Wednesday':
+        elif day == 'Wednesday' or 'wednesday':
             return 2
-        elif day == 'Thursday':
+        elif day == 'Thursday' or 'thursday':
             return 3
-        elif day == 'Friday':
+        elif day == 'Friday' or 'friday':
             return 4
-        elif day == 'Saturday':
+        elif day == 'Saturday' or 'saturday':
             return 5
-        elif day == 'Sunday':
+        elif day == 'Sunday' or 'sunday':
             return 6
 
     def weekday():
