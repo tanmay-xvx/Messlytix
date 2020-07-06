@@ -101,24 +101,25 @@ def predict():
     '''
     # int_features = [int(x) for x in request.form.values()]
     day = request.form.get("weekday")
-    print(day)
-
+    day1=4
     def convert_to_int(day):
-        if day == 'Monday' or 'monday':
+        if(day=='Monday' or day=='monday'):
             return 0
-        elif day == 'Tuesday' or 'tuesday':
+        if(day == 'Tuesday' or day=='tuesday'):
             return 1
-        elif day == 'Wednesday' or 'wednesday':
-            return 2
-        elif day == 'Thursday' or 'thursday':
+        if(day == 'Wednesday' or day=='wednesday'):
+            return 2    
+        if(day == 'Thursday' or day=='thursday'):
             return 3
-        elif day == 'Friday' or 'friday':
+        if(day == 'Friday' or day=='friday'):
             return 4
-        elif day == 'Saturday' or 'saturday':
+        if(day == 'Saturday' or day=='saturday'):
             return 5
-        elif day == 'Sunday' or 'sunday':
+        if(day == 'Sunday' or day=='sunday'):
             return 6
-
+            
+    day1=convert_to_int(day)
+    
     def weekday():
         if(day1 != [5, 6]):
             return 0
@@ -159,11 +160,11 @@ def predict():
             return 330.233
     # final_features = [int_features]
     Wastage = 0
-    day1 = convert_to_int(day)
     weekend = weekday()
     mean_wastage = meanwastage()
     New_Menu_rating = menu_rating()
     prediction = model.predict([[day1, weekend, New_Menu_rating, Wastage]])
+    print([day1, weekend, New_Menu_rating, Wastage])
     output = round(prediction[0], 3)
     attendees = db.session.query(Feedback).filter(Feedback.attendance == 'yes').count()
 
